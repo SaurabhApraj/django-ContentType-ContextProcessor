@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Students</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>firstname</td>
+        <td>lastname</td>
+        <td>city</td>
+        <td>email</td>
+      </tr>
+      {% if students %} 
+        {% for student in students %}
+            <tr>
+                <td>{{student.firstname}}</td>
+                <td>{{student.lastname}}</td>
+                <td>{{student.city}}</td>
+                <td>{{student.email}}</td>
+            </tr>
+        {% endfor %} {% else %}
+      <tr>
+        <td colspan="4">No Data Found</td>
+      </tr>
+      {% endif %}
+    </table>
+  </body>
+</html>
